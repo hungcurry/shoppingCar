@@ -9,26 +9,65 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./all.css">
-    <title>買到剁手手！</title>
+    <title>貓貓 買到剁手手！</title>
   </head>
   <body>
   <!-- nav -->
   <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="javascript:;">
-        <i class="fa fa-heart text-info"></i>
-        貓貓血拚賣賣
+        <i class="fa fa-heart text-warning"></i>
+        貓貓血拚市集
       </a>
       <div class="dropdown ms-auto">
         <button class="btn btn-sm btn-cart" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa fa-shopping-cart text-dark fa-2x" aria-hidden="true"></i>
           <span class="badge rounded-pill bg-danger">12</span>
         </button>
+        <div class="dropdown-menu dropdown-menu-end" 
+        aria-labelledby="dropdownMenuButton1" style="min-width: 300px;">
+          <div class="px-4 py-3">
+            <h6>已選擇商品</h6>
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#removeModal" class="link-dark" data-bs-toggle="modal" data-title="金牌西裝 1件">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </td>
+                  <td>絨毛系列-恐龍爛</td>
+                  <td>1 件</td>
+                  <td>$520</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#removeModal" class="link-dark" data-bs-toggle="modal" data-title="金牌女裝 1件">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </td>
+                  <td>絨毛系列-蝶龍糬</td>
+                  <td>1 件</td>
+                  <td>$480</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-warning w-100">結帳去</button>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
-
-
+  <!-- banner -->
+  <div class="p-5 mb-4 banner-bg d-flex align-items-end">
+    <div class="container py-3">
+      <div class="p-3 bg-lighter">
+        <h1 class="display-3 fw-bold">貓貓 買到剁手手！最後出清</h1>
+        <p class="col-md-8 lead">這裡是白爛貓雜貨舖，專售白爛貓官方授權精品、絨毛娃娃及居家、文具生活百貨與3C等商品，
+          以平實價格提供豐富有趣多元的正版良品給所有喜愛白爛貓的粉絲們。</p>
+      </div>
+    </div>
+  </div>
 
 
 

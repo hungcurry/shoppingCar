@@ -5,10 +5,20 @@
 
 .btn-cart {
   position: relative;
+  background-color: transparent;
 }
 
 .btn-cart .badge {
   position: absolute;
   top: -1px;
   right: -1px;
+}
+.banner-bg {
+  background-image: url(./images/banner.png);
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+}
+.bg-lighter {
+  background-color: rgba(255, 255, 255, 0.65);
 }
