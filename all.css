@@ -1,0 +1,14 @@
+
+*{
+  /* outline: 1px solid red; */
+}
+
+.btn-cart {
+  position: relative;
+}
+
+.btn-cart .badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
