@@ -26,7 +26,7 @@
           <span class="badge rounded-pill bg-danger">12</span>
         </button>
         <div class="dropdown-menu dropdown-menu-end" 
-        aria-labelledby="dropdownMenuButton1" style="min-width: 300px;">
+        aria-labelledby="dropdownMenuButton1" style="min-width: 300px;" disabled>
           <div class="px-4 py-3">
             <h6>已選擇商品</h6>
             <table class="table table-sm">
@@ -53,15 +53,139 @@
                 </tr>
               </tbody>
             </table>
-            <button type="submit" class="btn btn-warning w-100">結帳去</button>
+            <a href="checkout.html" class="btn btn-warning w-100 disabled">結帳去</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
   <main class="main">
-    <div class="container">
+    <div class="container py-5">
+      <!-- 結帳 -->
+      <h1 class="text-center text-secondary mb-3">貓貓血拚 結帳</h1>
+      <!-- 步驟 -->
+      <div class="row g-2 text-center">
+        <div class="col-12 col-sm">
+          <div class="alert alert-warning rounded-pill" role="alert">
+            1. 輸入訂單資料
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-light rounded-pill" role="alert">
+            2. 金流付款
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-light rounded-pill" role="alert">
+            3. 完成
+          </div>
+        </div>
+      </div>
+      <!-- 內容 -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
 
+          <div class="card mb-4">
+            <div class="card-header py-3 border-bottom-0" role="tab">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <a href="#collapseOne" class="text-decoration-none text-success" 
+                  data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">顯示購物車細節</a>
+                  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </div>
+                <span class="h4 mb-0"><strong class="text-danger">$1840</strong></span>
+              </div>
+            </div>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+            <div class="table-responsive">
+              <table class="table cart-table table-sm">
+                <thead class="fw-bold">
+                  <tr>
+                    <th style="width: 40px;"></th>
+                    <th style="width: 120px;"></th>
+                    <th class="text-nowrap">商品名稱</th>
+                    <th style="width: 90px;">數量</th>
+                    <th style="width: 90px;">小計</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="py-3">
+                    <td class="text-center align-middle"><a href="#removeModal" class="link-dark" 
+                      data-bs-toggle="modal" data-title="絨毛系列-恐龍爛"><i class="fa fa-trash"></i></a>
+                    </td>
+                    <td><img src="./images/pane2/01.png" class="checkout-image" alt="suit"></td>
+                    <td>絨毛系列-恐龍爛</td>
+                    <td>1 件</td>
+                    <td class="text-end">$890</td>
+                  </tr>
+                  <tr class="py-3">
+                    <td class="text-center align-middle"><a href="#removeModal" class="link-dark" 
+                      data-bs-toggle="modal" data-title="絨毛系列-蝶龍糬"><i class="fa fa-trash"></i></a>
+                    </td>
+                    <td><img src="./images/pane2/03.png" class="checkout-image" alt="suit"></td>
+                    <td>絨毛系列-蝶龍糬</td>
+                    <td>1 件</td>
+                    <td class="text-end">$890</td>
+                  </tr>
+                </tbody>
+                <tfoot class="fw-bold">
+                  <tr>
+                    <td class="text-end" colspan="4">運費</td>
+                    <td class="text-end">$60</td>
+                  </tr>
+                  <tr>
+                    <td class="text-end" colspan="4">合計</td>
+                    <td class="text-end text-danger">$1840</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <h5 class="text-center py-3 mt-5 mb-2 bg-light">訂購人資訊</h5>
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="confirm-name" class="form-label aa">姓名</label>
+              <input type="text" class="form-control" id="confirm-name" placeholder="姓名" required>
+            </div>
+            <div class="col-md-6">
+              <label for="confirm-email" class="form-label bb">Email</label>
+              <input type="email" class="form-control" id="confirm-email" placeholder="Email" required>
+            </div>
+            <div class="col-md-4">
+              <label for="confirm-country" class="form-label cc">國家</label>
+              <select id="confirm-country" class="form-select" required>
+                <!-- selected是預選好 disabled是不讓用戶選 value沒有空白仍會被送出通過驗證 -->
+                <option selected disabled value="">請選擇國家</option>
+                <option>台灣</option>
+                <option>日本</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="confirm-city" class="form-label dd">城市</label>
+              <select id="confirm-city" class="form-select" required>
+                <option selected disabled value="">請選擇城市</option>
+                <option>台北市</option>
+                <option>新竹市</option>
+                <option>高雄市</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="confirm-zip" class="form-label">郵遞區號</label>
+              <input type="text" class="form-control" id="confirm-zip" placeholder="郵遞區號" required>
+            </div>
+            <div class="col-12">
+              <label for="confirm-address" class="form-label">地址</label>
+              <input type="text" class="form-control" id="confirm-address" placeholder="重慶南路一段122號" required>
+            </div>
+            <div class="col-auto ms-auto">
+              <!-- 或col-12 text-end -->
+              <button type="button" class="btn btn-secondary">繼續選購</button>
+              <button type="button" class="btn btn-warning js-check">確認付款</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
   <!-- footer -->
@@ -96,7 +220,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
-    <script src="./index.js"></script>
+    <script src="./validate.js"></script>
 
   </body>
 </html>
