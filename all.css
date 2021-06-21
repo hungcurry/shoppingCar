@@ -1,8 +1,11 @@
 
 *{
   /* outline: 1px solid red; */
-}
 
+}
+html,body{
+  font-family: 'Noto Sans TC', sans-serif;
+}
 .btn-cart {
   position: relative;
   background-color: transparent;
@@ -14,11 +17,55 @@
   right: -1px;
 }
 .banner-bg {
-  background-image: url(./images/banner.png);
+  background-image: url(./images/banner4.jpg);
   background-size: cover;
   background-position: center center;
-  min-height: 400px;
+  min-height: 650px;
 }
 .bg-lighter {
   background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* list-group */
+.list-group-item.active {
+  color: #380606;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+
+/* cart btn */
+.btn-shopping {
+  background-color: #fff;
+  border: 1px solid #5c5c5c;
+  color: #380606;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+}
+.btn-shopping.disabled {
+  color: #5c5c5c;
+}
+.btn-shopping:hover {
+  background-color: #ffc107;
+  border: 1px solid #ffc107;
+}
+.origin-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #696262;
+}
+.price-color {
+  color: #e26021;
+  font-size: 20px;
+}
+.card-footer {
+  padding: .75rem .95rem;
+}
+
+
+/* Utilities */
+.ls-1{
+  letter-spacing: 1px;
 }
