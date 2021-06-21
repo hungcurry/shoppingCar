@@ -31,7 +31,7 @@ body {
   right: -1px;
 }
 .banner-bg {
-  background-image: url(./images/banner4.jpg);
+  background-image: url(./images/banner/banner4.jpg);
   background-size: cover;
   background-position: center center;
   min-height: 650px;
@@ -86,4 +86,7 @@ body {
 }
 .text-darker{
   color: #380606;
+}
+.top-10{
+  top: 10px;
 }
