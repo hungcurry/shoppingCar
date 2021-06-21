@@ -5,7 +5,21 @@
 }
 html,body{
   font-family: 'Noto Sans TC', sans-serif;
+  height: 100%;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+
+/* nav */
 .btn-cart {
   position: relative;
   background-color: transparent;
@@ -25,6 +39,7 @@ html,body{
 .bg-lighter {
   background-color: rgba(255, 255, 255, 0.65);
 }
+
 
 /* list-group */
 .list-group-item.active {
@@ -68,4 +83,7 @@ html,body{
 /* Utilities */
 .ls-1{
   letter-spacing: 1px;
+}
+.text-darker{
+  color: #380606;
 }
