@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./all.css">
+    <title>貓貓 買到剁手手！</title>
+  </head>
+  <body>
+  <!-- nav -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fa fa-heart text-warning"></i>
+        貓貓血拚市集
+      </a>
+      <div class="dropdown ms-auto">
+        <button class="btn btn-sm btn-cart" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-shopping-cart text-dark fa-2x" aria-hidden="true"></i>
+          <span class="badge rounded-pill bg-danger">12</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" 
+        aria-labelledby="dropdownMenuButton1" style="min-width: 300px;" disabled>
+          <div class="px-4 py-3">
+            <h6>已選擇商品</h6>
+            <table class="table table-sm">
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#removeModal" class="link-dark" data-bs-toggle="modal" data-title="絨毛系列-恐龍爛">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </td>
+                  <td>絨毛系列-恐龍爛</td>
+                  <td>1 件</td>
+                  <td class="text-danger">$890</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#removeModal" class="link-dark" data-bs-toggle="modal" data-title="絨毛系列-蝶龍糬">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                  </td>
+                  <td>絨毛系列-蝶龍糬</td>
+                  <td>1 件</td>
+                  <td class="text-danger">$890</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="checkout.html" class="btn btn-warning w-100 disabled">結帳去</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <div class="container py-5">
+      <!-- 結帳 -->
+      <h1 class="text-center text-secondary mb-3">貓貓血拚 結帳</h1>
+      <!-- 步驟 -->
+      <div class="row g-2 text-center">
+        <div class="col-12 col-sm">
+          <div class="alert alert-secondary rounded-pill" role="alert">
+            1. 輸入訂單資料
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-warning rounded-pill" role="alert">
+            2. 金流付款
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-light rounded-pill" role="alert">
+            3. 完成
+          </div>
+        </div>
+      </div>
+      <!-- 內容 -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+          <h5 class="text-center py-3 mt-5 mb-4 bg-light">請選擇付款方式</h5>
+          <div class="btn-group text-center w-100 mb-4" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-warning" for="btnradio1">信用卡一次付清</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-warning" for="btnradio2">信用卡紅利折抵</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-warning" for="btnradio3">信用卡分期付款</label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-warning" for="btnradio4">ATM轉帳</label>
+          </div>
+          <form>
+            <!-- 輸入信用卡 -->
+            <div class="row align-items-center justify-content-between mb-4">
+              <div class="col-md-2">
+                <h4 class="h6 me-lg-3 mb-3 mb-md-0">輸入信用卡</h4>
+              </div>
+              <div class="col-md-7">
+                <div class="form-check d-flex align-items-center
+                mb-3 mb-md-0">
+                  <div class="payCard">
+                    <input class="form-check-input payCard-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      卡號
+                    </label>
+                  </div>
+                  <div class="w-100 d-md-none">
+                    <input type="number text-center" class="form-control" maxlength="16">
+                  </div>
+                  <div class="card-number d-none d-md-block">
+                    <input type="number text-center" class="form-control" maxlength="4">
+                  </div>
+                  <div class="card-number d-none d-md-block">
+                    <input type="number text-center" class="form-control" maxlength="4">
+                  </div>
+                  <div class="card-number d-none d-md-block">
+                    <input type="number text-center" class="form-control" maxlength="4">
+                  </div>
+                  <div class="card-number d-none d-md-block">
+                    <input type="number text-center" class="form-control" maxlength="4">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="payCard-safe d-flex align-items-center justify-content-start justify-content-md-end">
+                  <label for="payCard-safe" class="form-label me-3 mb-0">背面末三碼</label>
+                  <input type="text" class="form-control card-number d-inline-block me-0" id="payCard-safe" maxlength="3">
+                </div>
+              </div>
+            </div>
+            <!-- 選擇期數 -->
+            <div class="row align-items-center mb-4">
+              <div class="col-md-2">
+                <h4 class="h6 me-lg-3 mb-3 mb-md-0 me-3">選擇期數</h4>
+              </div>
+              <div class="col-md-4">
+                <select class="form-select mb-3 mb-md-0 " aria-label="Default select example">
+                  <option value="80">3期&nbsp;0利率，每期 $1563</option>
+                  <option value="82">6期&nbsp;0利率，每期 $781</option>
+                  <option value="83">9期&nbsp; 4%，每期 $541</option>        
+                  <option value="87">12期&nbsp; 6%，每期 $414</option>
+                  <option value="91">24期&nbsp; 8%，每期 $211</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div class="row justify-content-end align-items-center">
+                  <div class="col-md-4">
+                    <h4 class="h6 me-lg-3 mb-3 mb-md-0 me-3">有效月年</h4>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-select mb-3 mb-md-0 " aria-label="Default select example">
+                      <option value="">月份</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <select class="form-select mb-3 mb-md-0 " aria-label="Default select example">
+                      <option value="">年份</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-end">
+              <button type="button" class="btn btn-secondary">繼續選購</button>
+              <button type="button" class="btn btn-warning js-check">確認付款</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="footer bg-light text-muted py-4">
+    <div class="container">
+      <ul class="list-inline text-center">
+        <li class="list-inline-item">© Copright 2021 貓貓血拚市集</li>
+        <li class="list-inline-item">
+          <a href="javascript:;" class="text-darker text-decoration-none">
+            <i class="fa fa-instagram"></i>
+            Instagram
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript:;" class="text-darker text-decoration-none">
+            <i class="fa fa-facebook-square"></i>
+            Facebook
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="javascript:;" class="text-darker text-decoration-none">
+            About
+          </a>
+        </li>
+      </ul>
+      <p class="text-center mb-0">Made with Bootstrap5  無商業用途，僅供學習使用</p>
+    </div>
+  </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script>
+      let check = document.querySelector('.js-check');
+      function submitClick(){
+        window.location.href='./checkout03.html';
+      }
+      check.addEventListener('click', submitClick);
+
+    </script>
+
+  </body>
+</html>
