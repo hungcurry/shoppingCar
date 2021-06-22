@@ -89,6 +89,21 @@ body {
   object-fit: cover;
   object-position: center center;
 }
+.payCard-input:checked{
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.payCard{
+  width: 50px;
+  margin-right: 15px;
+}
+.payCard-safe > label{
+  width: 80px;
+}
+.card-number{
+  width: 70px;
+  margin-right: 5px;
+}
 
 /* Utilities */
 .ls-1{
